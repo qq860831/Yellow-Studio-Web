@@ -3,57 +3,70 @@ $color_blue: #282f44;
 $color_brown: #E6AF2E;
 $color_yellow: #f5d061;
 $color_white: #ececec;
+
 // -------------------
-*{
+* {
     margin: 0;
     padding: 0;
-    // box-sizing: border-box;
+    box-sizing: border-box;
     font-family: 'Oswald', '微軟正黑體';
-    border: solid 1px ;
+    // border: solid 1px;
 }
+
 @mixin ab_center {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-@mixin size($w,$h) {
+
+@mixin size($w, $h) {
     width: $w;
     height: $h;
 }
-html,body{
+
+html,
+body {
     overflow-x: hidden;
     // 讓圖片超出框架的左右時隱藏，防止左右可移動
     font-size: 16px;
     height: 200vh;
 }
+
 // navbar
-nav.navbar{
+nav.navbar {
     transition: 0.5s;
-    a{
+
+    a {
         transition: 0.5s;
     }
-    .at_top{
+
+    .at_top {
         background-color: transparent;
     }
-    .at_top a{
+
+    .at_top a {
         color: white;
     }
-    .at_top a:visited{
+
+    .at_top a:visited {
         color: white;
     }
 }
+
 // header
-header{
+header {
     position: relative;
     background-color: $color_blue;
     text-align: center;
-    .icon{
+
+    .icon {
         width: 80%;
         max-width: 250px;
         padding: 250px 0px;
     }
-    .marginbottom{
+
+    .marginbottom {
         position: absolute;
         width: 95%;
         bottom: 0;
@@ -61,85 +74,98 @@ header{
         animation: upin 1.5s both;
         // upin向上浮動出來
     }
-        @keyframes upin {
+
+    @keyframes upin {
         0% {
-          bottom: -100px;
+            bottom: -100px;
         }
+
         100% {
-          bottom: 0px;
+            bottom: 0px;
         }
-      }
-    .explore{
+    }
+
+    .explore {
         @include ab_center();
         font-size: 16px;
         color: $color_yellow;
         top: 85%;
         opacity: 0;
         transition: 0.5s;
-        &:after{
-        display: block;
-        content: "v";
-        transform: scaleX(1.2) scaleY(0.5);
+
+        &:after {
+            display: block;
+            content: "v";
+            transform: scaleX(1.2) scaleY(0.5);
         }
     }
-    .explore .at_top{
+
+    .explore .at_top {
         opacity: 1;
     }
 }
-section{
+
+section {
     padding: 60px;
     position: relative;
-    #section_about{
+    #section_about {
         background-color: $color_brown;
-        .container{
-        }
-        .row{
+
+        .container {}
+
+        .row {
             height: 150px;
             color: black;
-            .r1text{
+
+            .r1text {
                 font-size: 80px;
+
             }
-            .r2text{
+
+            .r2text {
                 font-size: 35px;
             }
-            .r3text{
+
+            .r3text {
                 font-size: 50px;
+                text-align: right;
             }
         }
-        .cat{
 
-        }
-        .btn-area{
+        .cat {}
+
+        .btn-area {
             height: 150px;
         }
-        a{
 
-        }
-        #cross{
+        a {}
 
-        }
-        .tri{
+        #cross {}
 
-        }
-        .tri1{
+        .tri {}
+
+        .tri1 {
             width: 350px;
         }
-        .tri2{
+
+        .tri2 {
             width: 20px;
-            margin-left:20px ;
+            margin-left: 20px;
         }
-        .tri3{
+
+        .tri3 {
             width: 150px;
             margin-left: 70%;
         }
-        .tri4{
+
+        .tri4 {
             width: 70px;
             margin-left: 100%;
         }
-        .tri5{
+
+        .tri5 {
             width: 80px;
             margin-left: 100%;
         }
     }
 }
-   
