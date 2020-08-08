@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top at_top">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#header_index">Yellow Studio</a>
+          </div>
+          <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#section_about">About</a></li>
+              <li><a href="#section_works">Works<span class="sr-only">(current)</span></a></li>
+              <li><a href="#section_contact">Contact</a></li>
+            </ul>
+          </div>
+          <!-- /.nav-collapse-->
+        </div>
+    </nav>
+
     <!-- Header -->
     <header id="header_index">
         <div class="container">
@@ -17,12 +34,46 @@
             <div class="explore at_top">EXPLORE</div>
         </div>
     </header>
+
+    <!-- About -->
+    <section id="section_about">
+        <div class="container">
+          <!--第一行-標題-->
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-4"><img class="tri1" src="http://awiclass.monoame.com/img/webpic/w_tri1.svg"/>
+              <h2 class="r1text">WORKS IN YELLOW</h2>
+            </div>
+          </div>
+          <!--第二行-標題跟兩個三角形-->
+          <div class="row">
+            <div class="col-sm-4"><img class="tri2" src="http://awiclass.monoame.com/img/webpic/w_tri2.svg"/></div>
+            <div class="col-sm-8"><img class="tri3" src="http://awiclass.monoame.com/img/webpic/w_tri3.svg"/>
+              <h3 class="r2text">YELLOW STUDIO-Website Design / Development</h3>
+              <h3 class="r2text">Interactive Art Design</h3>
+            </div>
+          </div>
+          <!--第三行-標題-->
+          <div class="row">
+            <div class="col-sm-8">
+              <h2 class="r3text">430 MORE SUCCESS CASES</h2>
+            </div>
+          </div>
+          <div class="clearfix"></div> <!-- 修正清除浮動的問題 -->
+          <!--第三行-按鈕跟兩個三角形-->
+          <div class="row">
+            <div class="col-sm-4 btn-area"><a class="btn btn-lg btn-default" href="#section_works">MORE STORY</a><img class="tri4" src="http://awiclass.monoame.com/img/webpic/w_tri4.svg"/></div>
+            <div class="col-sm-4"><img class="tri5" src="http://awiclass.monoame.com/img/webpic/w_tri5.svg"/></div>
+          </div>
+        </div>
+        <div id="cross"></div><img class="cat" id="cat" src="http://awiclass.monoame.com/catpic/cat_leftop.png"/><img class="marginbottom" src="http://awiclass.monoame.com/img/margin/m_about.svg"/>
+    </section>
     
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script>
     <script src="./main.js"></script>
+   
 </body>
 </html>

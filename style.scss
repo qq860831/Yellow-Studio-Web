@@ -7,8 +7,9 @@ $color_white: #ececec;
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     font-family: 'Oswald', '微軟正黑體';
+    border: solid 1px ;
 }
 @mixin ab_center {
     position: absolute;
@@ -24,7 +25,25 @@ html,body{
     overflow-x: hidden;
     // 讓圖片超出框架的左右時隱藏，防止左右可移動
     font-size: 16px;
+    height: 200vh;
 }
+// navbar
+nav.navbar{
+    transition: 0.5s;
+    a{
+        transition: 0.5s;
+    }
+    .at_top{
+        background-color: transparent;
+    }
+    .at_top a{
+        color: white;
+    }
+    .at_top a:visited{
+        color: white;
+    }
+}
+// header
 header{
     position: relative;
     background-color: $color_blue;
@@ -44,10 +63,83 @@ header{
     }
         @keyframes upin {
         0% {
-          bottom: -200px;
+          bottom: -100px;
         }
         100% {
           bottom: 0px;
         }
       }
+    .explore{
+        @include ab_center();
+        font-size: 16px;
+        color: $color_yellow;
+        top: 85%;
+        opacity: 0;
+        transition: 0.5s;
+        &:after{
+        display: block;
+        content: "v";
+        transform: scaleX(1.2) scaleY(0.5);
+        }
+    }
+    .explore .at_top{
+        opacity: 1;
+    }
 }
+section{
+    padding: 60px;
+    position: relative;
+    #section_about{
+        background-color: $color_brown;
+        .container{
+        }
+        .row{
+            height: 150px;
+            color: black;
+            .r1text{
+                font-size: 80px;
+            }
+            .r2text{
+                font-size: 35px;
+            }
+            .r3text{
+                font-size: 50px;
+            }
+        }
+        .cat{
+
+        }
+        .btn-area{
+            height: 150px;
+        }
+        a{
+
+        }
+        #cross{
+
+        }
+        .tri{
+
+        }
+        .tri1{
+            width: 350px;
+        }
+        .tri2{
+            width: 20px;
+            margin-left:20px ;
+        }
+        .tri3{
+            width: 150px;
+            margin-left: 70%;
+        }
+        .tri4{
+            width: 70px;
+            margin-left: 100%;
+        }
+        .tri5{
+            width: 80px;
+            margin-left: 100%;
+        }
+    }
+}
+   

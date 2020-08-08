@@ -2,14 +2,36 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   font-family: 'Oswald', '微軟正黑體';
+  border: solid 1px;
 }
 
 html, body {
   overflow-x: hidden;
   font-size: 16px;
+  height: 200vh;
+}
+
+nav.navbar {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav.navbar a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav.navbar .at_top {
+  background-color: transparent;
+}
+
+nav.navbar .at_top a {
+  color: white;
+}
+
+nav.navbar .at_top a:visited {
+  color: white;
 }
 
 header {
@@ -35,7 +57,7 @@ header .marginbottom {
 
 @-webkit-keyframes upin {
   0% {
-    bottom: -200px;
+    bottom: -100px;
   }
   100% {
     bottom: 0px;
@@ -44,10 +66,89 @@ header .marginbottom {
 
 @keyframes upin {
   0% {
-    bottom: -200px;
+    bottom: -100px;
   }
   100% {
     bottom: 0px;
   }
+}
+
+header .explore {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #f5d061;
+  top: 85%;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .explore:after {
+  display: block;
+  content: "v";
+  -webkit-transform: scaleX(1.2) scaleY(0.5);
+          transform: scaleX(1.2) scaleY(0.5);
+}
+
+header .explore .at_top {
+  opacity: 1;
+}
+
+section {
+  padding: 60px;
+  position: relative;
+}
+
+section #section_about {
+  background-color: #E6AF2E;
+}
+
+section #section_about .row {
+  height: 150px;
+  color: black;
+}
+
+section #section_about .row .r1text {
+  font-size: 80px;
+}
+
+section #section_about .row .r2text {
+  font-size: 35px;
+}
+
+section #section_about .row .r3text {
+  font-size: 50px;
+}
+
+section #section_about .btn-area {
+  height: 150px;
+}
+
+section #section_about .tri1 {
+  width: 350px;
+}
+
+section #section_about .tri2 {
+  width: 20px;
+  margin-left: 20px;
+}
+
+section #section_about .tri3 {
+  width: 150px;
+  margin-left: 70%;
+}
+
+section #section_about .tri4 {
+  width: 70px;
+  margin-left: 100%;
+}
+
+section #section_about .tri5 {
+  width: 80px;
+  margin-left: 100%;
 }
 /*# sourceMappingURL=style.css.map */
