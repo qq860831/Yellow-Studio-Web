@@ -1,0 +1,53 @@
+// 顏色定義
+$color_blue: #282f44;
+$color_brown: #E6AF2E;
+$color_yellow: #f5d061;
+$color_white: #ececec;
+// -------------------
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', '微軟正黑體';
+}
+@mixin ab_center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin size($w,$h) {
+    width: $w;
+    height: $h;
+}
+html,body{
+    overflow-x: hidden;
+    // 讓圖片超出框架的左右時隱藏，防止左右可移動
+    font-size: 16px;
+}
+header{
+    position: relative;
+    background-color: $color_blue;
+    text-align: center;
+    .icon{
+        width: 80%;
+        max-width: 250px;
+        padding: 250px 0px;
+    }
+    .marginbottom{
+        position: absolute;
+        width: 95%;
+        bottom: 0;
+        right: 0;
+        animation: upin 1.5s both;
+        // upin向上浮動出來
+    }
+        @keyframes upin {
+        0% {
+          bottom: -200px;
+        }
+        100% {
+          bottom: 0px;
+        }
+      }
+}
