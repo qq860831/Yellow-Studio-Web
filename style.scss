@@ -10,7 +10,7 @@ $color_white: #ececec;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Oswald', '微軟正黑體';
-    // border: solid 1px;
+    border: solid 1px;
 }
 
 @mixin ab_center {
@@ -111,7 +111,9 @@ section {
     #section_about {
         background-color: $color_brown;
 
-        .container {}
+        .container {
+            transform: rotate(15deg) scale(0.9);
+        }
 
         .row {
             height: 150px;
@@ -119,30 +121,54 @@ section {
 
             .r1text {
                 font-size: 80px;
-
+                transition: 0.1s;
             }
 
             .r2text {
                 font-size: 35px;
+                transition: 0.2s;
             }
 
             .r3text {
                 font-size: 50px;
                 text-align: right;
+                transition: 0.3s;
             }
         }
 
-        .cat {}
-
+        .cat {
+            width: 30%;
+            max-width: 300px;
+            position: absolute;
+            bottom: -2px;
+            right: 25px;
+        }
+        .marginbottom{
+            position: absolute;
+            width: 60%;
+            top: calc(100% - 2px);
+            z-index: 3;
+        }
         .btn-area {
             height: 150px;
         }
 
-        a {}
+        a {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
 
-        #cross {}
+        #cross {
+            position: absolute;
+            z-index: 5;
+            pointer-events: none;
+        }
 
-        .tri {}
+        .tri {
+            transform: rotate(-15deg);
+        }
 
         .tri1 {
             width: 350px;

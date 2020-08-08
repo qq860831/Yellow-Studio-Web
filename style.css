@@ -2,11 +2,14 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Oswald', '微軟正黑體';
   border: solid 1px;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   font-size: 16px;
   height: 200vh;
@@ -107,6 +110,11 @@ section #section_about {
   background-color: #E6AF2E;
 }
 
+section #section_about .container {
+  -webkit-transform: rotate(15deg) scale(0.9);
+          transform: rotate(15deg) scale(0.9);
+}
+
 section #section_about .row {
   height: 150px;
   color: black;
@@ -114,18 +122,59 @@ section #section_about .row {
 
 section #section_about .row .r1text {
   font-size: 80px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 section #section_about .row .r2text {
   font-size: 35px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 section #section_about .row .r3text {
   font-size: 50px;
+  text-align: right;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+section #section_about .cat {
+  width: 30%;
+  max-width: 300px;
+  position: absolute;
+  bottom: -2px;
+  right: 25px;
+}
+
+section #section_about .marginbottom {
+  position: absolute;
+  width: 60%;
+  top: calc(100% - 2px);
+  z-index: 3;
 }
 
 section #section_about .btn-area {
   height: 150px;
+}
+
+section #section_about a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section #section_about #cross {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+}
+
+section #section_about .tri {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
 }
 
 section #section_about .tri1 {
