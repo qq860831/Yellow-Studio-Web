@@ -10,7 +10,14 @@ $color_white: #ececec;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Oswald', '微軟正黑體';
-    border: solid 1px;
+    border: solid 1px !important;
+}
+// debug
+header{
+    display: none;
+}
+.navbar{
+    display: none;
 }
 
 @mixin ab_center {
@@ -28,29 +35,27 @@ $color_white: #ececec;
 html,
 body {
     overflow-x: hidden;
-    // 讓圖片超出框架的左右時隱藏，防止左右可移動
-    font-size: 16px;
+    // 讓圖片超出框架的左右時隱藏防止移動
     height: 200vh;
 }
 
 // navbar
+.navbar-nav{
+    margin-left: 70%;
+}
 nav.navbar {
     transition: 0.5s;
-
-    a {
+    border-bottom: 1px solid $color_white;
+    a{ 
         transition: 0.5s;
+        color: #fff;
+        &:hover{
+            color:rgb(97, 97, 97);
+        } 
     }
-
-    .at_top {
-        background-color: transparent;
-    }
-
-    .at_top a {
-        color: white;
-    }
-
-    .at_top a:visited {
-        color: white;
+    &.at_top{
+        background-color:transparent;
+        color: #fff;
     }
 }
 
@@ -68,20 +73,20 @@ header {
 
     .marginbottom {
         position: absolute;
-        width: 95%;
+        width: 90%;
         bottom: 0;
         right: 0;
         animation: upin 1.5s both;
-        // upin向上浮動出來
+        // upin向上浮動出來，
     }
 
     @keyframes upin {
         0% {
-            bottom: -100px;
+            bottom: -10%;
         }
 
         100% {
-            bottom: 0px;
+            bottom: 0;
         }
     }
 
@@ -91,107 +96,104 @@ header {
         color: $color_yellow;
         top: 85%;
         opacity: 0;
-        transition: 0.5s;
+        transition: all 0.5s;
 
         &:after {
             display: block;
             content: "v";
-            transform: scaleX(1.2) scaleY(0.5);
+            transform: scaleX(2) scaleY(1);
         }
-    }
-
-    .explore .at_top {
-        opacity: 1;
+        &.at_top{
+              opacity: 1;
+        }
     }
 }
 
 section {
     padding: 60px;
     position: relative;
+    background-color: $color_brown;
     #section_about {
-        background-color: $color_brown;
-
         .container {
             transform: rotate(15deg) scale(0.9);
         }
 
         .row {
-            height: 150px;
+            height: 500px;
             color: black;
-
-            .r1text {
-                font-size: 80px;
+            .r1text{
+                font-size: 4.5rem;
                 transition: 0.1s;
             }
 
             .r2text {
-                font-size: 35px;
+                font-size: 2.5rem;
                 transition: 0.2s;
             }
 
             .r3text {
-                font-size: 50px;
+                font-size: 3rem;
                 text-align: right;
                 transition: 0.3s;
             }
+            .tri {
+                transform: rotate(-15deg);
+            }
+            .tri1 {
+                width: 350px;
+            }
+
+            .tri2 {
+                width: 20px;
+                margin-left: 20px;
+            }
+
+            .tri3 {
+                width: 100px;
+                margin-left: 70%;
+            }
+
+            .tri4 {
+                width: 70px;
+                margin-left: 100%;
+            }
+
+            .tri5 {
+                width: 80px;
+                margin-left: 100%;
+            }
         }
 
-        .cat {
-            width: 30%;
-            max-width: 300px;
-            position: absolute;
-            bottom: -2px;
-            right: 25px;
-        }
-        .marginbottom{
-            position: absolute;
-            width: 60%;
-            top: calc(100% - 2px);
-            z-index: 3;
-        }
-        .btn-area {
-            height: 150px;
-        }
+        // .cat {
+        //     width: 30%;
+        //     max-width: 300px;
+        //     position: absolute;
+        //     bottom: -2px;
+        //     right: 25px;
+        // }
+        // .marginbottom{
+        //     position: absolute;
+        //     width: 60%;
+        //     top: calc(100% - 2px);
+        //     z-index: 3;
+        // }
+        // .btn-area {
+        //     height: 150px;
+        // }
 
-        a {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-        }
+        // a {
+        //     position: absolute;
+        //     left: 50%;
+        //     top: 50%;
+        //     transform: translate(-50%,-50%);
+        // }
 
-        #cross {
-            position: absolute;
-            z-index: 5;
-            pointer-events: none;
-        }
+        // #cross {
+        //     position: absolute;
+        //     z-index: 5;
+        //     pointer-events: none;
+        // }
 
-        .tri {
-            transform: rotate(-15deg);
-        }
-
-        .tri1 {
-            width: 350px;
-        }
-
-        .tri2 {
-            width: 20px;
-            margin-left: 20px;
-        }
-
-        .tri3 {
-            width: 150px;
-            margin-left: 70%;
-        }
-
-        .tri4 {
-            width: 70px;
-            margin-left: 100%;
-        }
-
-        .tri5 {
-            width: 80px;
-            margin-left: 100%;
-        }
+        
     }
 }

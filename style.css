@@ -5,36 +5,46 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Oswald', '微軟正黑體';
-  border: solid 1px;
+  border: solid 1px !important;
+}
+
+header {
+  display: none;
+}
+
+.navbar {
+  display: none;
 }
 
 html,
 body {
   overflow-x: hidden;
-  font-size: 16px;
   height: 200vh;
+}
+
+.navbar-nav {
+  margin-left: 70%;
 }
 
 nav.navbar {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  border-bottom: 1px solid #ececec;
 }
 
 nav.navbar a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  color: #fff;
 }
 
-nav.navbar .at_top {
+nav.navbar a:hover {
+  color: #616161;
+}
+
+nav.navbar.at_top {
   background-color: transparent;
-}
-
-nav.navbar .at_top a {
-  color: white;
-}
-
-nav.navbar .at_top a:visited {
-  color: white;
+  color: #fff;
 }
 
 header {
@@ -51,7 +61,7 @@ header .icon {
 
 header .marginbottom {
   position: absolute;
-  width: 95%;
+  width: 90%;
   bottom: 0;
   right: 0;
   -webkit-animation: upin 1.5s both;
@@ -60,19 +70,19 @@ header .marginbottom {
 
 @-webkit-keyframes upin {
   0% {
-    bottom: -100px;
+    bottom: -10%;
   }
   100% {
-    bottom: 0px;
+    bottom: 0;
   }
 }
 
 @keyframes upin {
   0% {
-    bottom: -100px;
+    bottom: -10%;
   }
   100% {
-    bottom: 0px;
+    bottom: 0;
   }
 }
 
@@ -86,27 +96,24 @@ header .explore {
   color: #f5d061;
   top: 85%;
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 header .explore:after {
   display: block;
   content: "v";
-  -webkit-transform: scaleX(1.2) scaleY(0.5);
-          transform: scaleX(1.2) scaleY(0.5);
+  -webkit-transform: scaleX(2) scaleY(1);
+          transform: scaleX(2) scaleY(1);
 }
 
-header .explore .at_top {
+header .explore.at_top {
   opacity: 1;
 }
 
 section {
   padding: 60px;
   position: relative;
-}
-
-section #section_about {
   background-color: #E6AF2E;
 }
 
@@ -116,87 +123,54 @@ section #section_about .container {
 }
 
 section #section_about .row {
-  height: 150px;
+  height: 500px;
   color: black;
 }
 
 section #section_about .row .r1text {
-  font-size: 80px;
+  font-size: 4.5rem;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
 
 section #section_about .row .r2text {
-  font-size: 35px;
+  font-size: 2.5rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 section #section_about .row .r3text {
-  font-size: 50px;
+  font-size: 3rem;
   text-align: right;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-section #section_about .cat {
-  width: 30%;
-  max-width: 300px;
-  position: absolute;
-  bottom: -2px;
-  right: 25px;
-}
-
-section #section_about .marginbottom {
-  position: absolute;
-  width: 60%;
-  top: calc(100% - 2px);
-  z-index: 3;
-}
-
-section #section_about .btn-area {
-  height: 150px;
-}
-
-section #section_about a {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section #section_about #cross {
-  position: absolute;
-  z-index: 5;
-  pointer-events: none;
-}
-
-section #section_about .tri {
+section #section_about .row .tri {
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
 }
 
-section #section_about .tri1 {
+section #section_about .row .tri1 {
   width: 350px;
 }
 
-section #section_about .tri2 {
+section #section_about .row .tri2 {
   width: 20px;
   margin-left: 20px;
 }
 
-section #section_about .tri3 {
-  width: 150px;
+section #section_about .row .tri3 {
+  width: 100px;
   margin-left: 70%;
 }
 
-section #section_about .tri4 {
+section #section_about .row .tri4 {
   width: 70px;
   margin-left: 100%;
 }
 
-section #section_about .tri5 {
+section #section_about .row .tri5 {
   width: 80px;
   margin-left: 100%;
 }
