@@ -25,7 +25,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top at_top">
-      <a class="navbar-brand p-3 pl-5" href="#">Yellow Studio</a>
+      <a class="navbar-brand p-3 pl-5" href="#header_index">Yellow Studio</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -90,8 +90,11 @@
          <div class="clearfix"></div>
          <!-- 第三行按鈕跟三角形*2 -->
          <div class="row">
-           <div class="col-sm-4 btn-area">
-            <a class="btn btn-lg" href="#section_works">MORE STORY</a>
+           <div class="col-sm-4 btn-area" style="height: 150px;">
+            <a class="btn btn-lg" href="#section_works" style="background-color: #fff; border: 0;  position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) rotate(10deg);">MORE STORY</a>
             <img class="tri tri4" src="http://awiclass.monoame.com/img/webpic/w_tri4.svg" style=" width: 70px;
             margin-left: 100%;  transform: rotate(-15deg);"/>
            </div>
@@ -100,6 +103,54 @@
             margin-left: 100%;  transform: rotate(-15deg);"/>
            </div>
          </div>
+    </section>
+
+    <!-- Service -->
+    <section id="section_service">
+      <img class="marginbottom" src="http://awiclass.monoame.com/img/margin/m_about.svg"/>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>Service</h1>
+          </div>
+          <div class="col-sm-4">
+            <img class="icon_service" src="http://awiclass.monoame.com/img/webpic/w_service_icon1.svg"/>
+            <h3>CI/VI Design</h3>
+          </div>
+          <div class="col-sm-4">
+            <img class="icon_service" src="http://awiclass.monoame.com/img/webpic/w_service_icon2.svg"/>
+            <h3>MotionGraphic</h3>
+          </div>
+          <div class="col-sm-4">
+            <img class="icon_service" src="http://awiclass.monoame.com/img/webpic/w_service_icon3.svg"/>
+            <h3>Web Development</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="section_works"><img class="marginbottom mountain" src="http://awiclass.monoame.com/img/margin/m_works.svg"/>
+      <div class="container" id="app">
+        <div class="row" v-if="works.length&gt;0">
+          <div class="col-sm-12">
+            <h1>Works</h1>
+          </div>
+          <div class="col-sm-6 work big"><img v-bind:src="works[1].img"/>
+            <div class="texts">
+              <h4 class="title">{{works[1].name}}</h4>
+              <p class="content" v-html="works[1].content.substr(0,40)"></p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="col-sm-6 work" v-for="w in works.slice(2,6)"><img v-bind:src="w.img"/>
+              <div class="texts">
+                <h4 class="title">{{w.name}}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
 
@@ -118,9 +169,9 @@
     crossorigin="anonymous"
   ></script>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script> -->
+  <!-- vue js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script>
+
     <script src="./main.js"></script>
    
 </body>

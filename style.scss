@@ -10,15 +10,14 @@ $color_white: #ececec;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Oswald', '微軟正黑體';
-    border: solid 1px !important;
 }
 // debug
-header{
-    display: none;
-}
-.navbar{
-    display: none;
-}
+// header{
+//     display: none;
+// }
+// .navbar{
+//     display: none;
+// }
 
 @mixin ab_center {
     position: absolute;
@@ -36,26 +35,24 @@ html,
 body {
     overflow-x: hidden;
     // 讓圖片超出框架的左右時隱藏防止移動
-    height: 200vh;
 }
 
 // navbar
-.navbar-nav{
-    margin-left: 70%;
-}
 nav.navbar {
     transition: 0.5s;
-    border-bottom: 1px solid $color_white;
+    border-bottom: 2px solid $color_white;
+    background-color: $color_white;
     a{ 
         transition: 0.5s;
-        color: #fff;
         &:hover{
             color:rgb(97, 97, 97);
         } 
     }
     &.at_top{
         background-color:transparent;
-        color: #fff;
+    }
+    .navbar-nav{
+        margin-left: 70%;
     }
 }
 
@@ -71,7 +68,7 @@ header {
         padding: 250px 0px;
     }
 
-    .marginbottom {
+    .marginbottom.mountain{
         position: absolute;
         width: 90%;
         bottom: 0;
@@ -108,7 +105,7 @@ header {
         }
     }
 }
-
+// About
 section {
     padding: 60px;
     position: relative;
@@ -117,7 +114,6 @@ section {
         .container {
             transform: rotate(15deg) scale(0.9);
         }
-
         .row {
             height: 500px;
             color: black;
@@ -163,37 +159,89 @@ section {
                 margin-left: 100%;
             }
         }
+        .cat {
+            width: 30%;
+            max-width: 300px;
+            position: absolute;
+            bottom: -2px;
+            right: 25px;
+        }
+        .marginbottom{
+            position: absolute;
+            width: 60%;
+            top: calc(100% - 2px);
+            z-index: 3;
+        }
+        .btn-area {
+            height: 150px;
+            a {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            }
+        }
 
-        // .cat {
-        //     width: 30%;
-        //     max-width: 300px;
-        //     position: absolute;
-        //     bottom: -2px;
-        //     right: 25px;
-        // }
-        // .marginbottom{
-        //     position: absolute;
-        //     width: 60%;
-        //     top: calc(100% - 2px);
-        //     z-index: 3;
-        // }
-        // .btn-area {
-        //     height: 150px;
-        // }
-
-        // a {
-        //     position: absolute;
-        //     left: 50%;
-        //     top: 50%;
-        //     transform: translate(-50%,-50%);
-        // }
-
-        // #cross {
-        //     position: absolute;
-        //     z-index: 5;
-        //     pointer-events: none;
-        // }
+        #cross {
+            position: absolute;
+            z-index: 5;
+            pointer-events: none;
+        }
 
         
+    }
+}
+// Service
+#section_service{
+    background-color: $color_white;
+    padding: 0;
+    h1{
+        background-color: $color_blue;
+        color: $color_white;
+        font-size: 1.5rem;
+        display: inline-block;
+        padding: 5px 20px;
+    }
+    .col-sm-4{
+        text-align: center;
+    }
+    h3{
+        color: $color_brown;
+    }
+    .icon_service{
+        width: 80%;
+    }
+}
+
+// work
+#section_works{
+    background-color: $color_white;
+    padding-top: 0;
+    h1{
+        background-color: $color_blue;
+        color: $color_white;
+        font-size: 1.25rem;
+        padding: 6px 25px;
+        display: inline-block;
+    }
+    .marginbottom{
+        position: absolute;
+        width: 90%;
+        right: 0px;
+        top: calc(100% - 2px);
+        z-index: 3;
+        max-width: 900px;
+    }
+    .col-sm-6{
+        overflow: hidden;
+    }
+    .work{
+        height: 230px;
+        cursor: pointer;
+        position: relative;
+        padding: 5px;
+        &.big{
+            height: 460px;
+        }
     }
 }

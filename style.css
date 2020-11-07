@@ -5,37 +5,23 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Oswald', '微軟正黑體';
-  border: solid 1px !important;
-}
-
-header {
-  display: none;
-}
-
-.navbar {
-  display: none;
 }
 
 html,
 body {
   overflow-x: hidden;
-  height: 200vh;
-}
-
-.navbar-nav {
-  margin-left: 70%;
 }
 
 nav.navbar {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 2px solid #ececec;
+  background-color: #ececec;
 }
 
 nav.navbar a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: #fff;
 }
 
 nav.navbar a:hover {
@@ -44,7 +30,10 @@ nav.navbar a:hover {
 
 nav.navbar.at_top {
   background-color: transparent;
-  color: #fff;
+}
+
+nav.navbar .navbar-nav {
+  margin-left: 70%;
 }
 
 header {
@@ -59,7 +48,7 @@ header .icon {
   padding: 250px 0px;
 }
 
-header .marginbottom {
+header .marginbottom.mountain {
   position: absolute;
   width: 90%;
   bottom: 0;
@@ -173,5 +162,100 @@ section #section_about .row .tri4 {
 section #section_about .row .tri5 {
   width: 80px;
   margin-left: 100%;
+}
+
+section #section_about .cat {
+  width: 30%;
+  max-width: 300px;
+  position: absolute;
+  bottom: -2px;
+  right: 25px;
+}
+
+section #section_about .marginbottom {
+  position: absolute;
+  width: 60%;
+  top: calc(100% - 2px);
+  z-index: 3;
+}
+
+section #section_about .btn-area {
+  height: 150px;
+}
+
+section #section_about .btn-area a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section #section_about #cross {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+}
+
+#section_service {
+  background-color: #ececec;
+  padding: 0;
+}
+
+#section_service h1 {
+  background-color: #282f44;
+  color: #ececec;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 5px 20px;
+}
+
+#section_service .col-sm-4 {
+  text-align: center;
+}
+
+#section_service h3 {
+  color: #E6AF2E;
+}
+
+#section_service .icon_service {
+  width: 80%;
+}
+
+#section_works {
+  background-color: #ececec;
+  padding-top: 0;
+}
+
+#section_works h1 {
+  background-color: #282f44;
+  color: #ececec;
+  font-size: 1.25rem;
+  padding: 6px 25px;
+  display: inline-block;
+}
+
+#section_works .marginbottom {
+  position: absolute;
+  width: 90%;
+  right: 0px;
+  top: calc(100% - 2px);
+  z-index: 3;
+  max-width: 900px;
+}
+
+#section_works .col-sm-6 {
+  overflow: hidden;
+}
+
+#section_works .work {
+  height: 230px;
+  cursor: pointer;
+  position: relative;
+  padding: 5px;
+}
+
+#section_works .work.big {
+  height: 460px;
 }
 /*# sourceMappingURL=style.css.map */
