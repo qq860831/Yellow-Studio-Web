@@ -41,12 +41,13 @@ body {
 nav.navbar {
     transition: 0.5s;
     border-bottom: 2px solid $color_white;
-    background-color: $color_white;
+    background-color: $color_yellow;
     a{ 
-        transition: 0.5s;
+        transition: 0.5s;    
+        color: $color_white;
         &:hover{
             color:rgb(97, 97, 97);
-        } 
+        }
     }
     &.at_top{
         background-color:transparent;

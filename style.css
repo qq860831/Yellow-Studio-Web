@@ -16,12 +16,13 @@ nav.navbar {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-bottom: 2px solid #ececec;
-  background-color: #ececec;
+  background-color: #f5d061;
 }
 
 nav.navbar a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  color: #ececec;
 }
 
 nav.navbar a:hover {
