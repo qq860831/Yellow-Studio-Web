@@ -258,4 +258,115 @@ section #section_about #cross {
 #section_works .work.big {
   height: 460px;
 }
+
+#section_works .work:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  z-index: 5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#section_works .work .texts {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5;
+  opacity: 0;
+  color: #ececec;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#section_works .work .title {
+  line-height: 24px;
+}
+
+#section_works .work:hover:before, #section_works .work:hover .texts {
+  opacity: 1;
+}
+
+#section_works .work img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#section_contact {
+  background-color: #282f44;
+  color: #ececec;
+  overflow: hidden;
+}
+
+#section_contact .mails {
+  height: 500px;
+}
+
+#section_contact .mails .mailbody {
+  background-color: #ececec;
+  color: #282f44;
+  padding: 20px;
+  padding-left: 10%;
+  position: absolute;
+  width: 80%;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+#section_contact .mails .mailbody h5 {
+  font-size: 2rem;
+}
+
+#section_contact .mails .mailcover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: 8%;
+  -webkit-transform: rotate(5deg) scale(2.2) translate(-50%, -50%);
+          transform: rotate(5deg) scale(2.2) translate(-50%, -50%);
+}
+
+#section_contact .mails .mailcover img {
+  width: 120%;
+}
+
+#section_contact .mails input, #section_contact .mails textarea {
+  display: block;
+  background-color: transparent;
+  border: none;
+  border: 3px solid #282f44;
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+#section_contact .mails textarea {
+  height: 100px;
+  width: 80%;
+  resize: none;
+}
+
+#footer {
+  background-color: #E6AF2E;
+  text-align: center;
+}
+
+#footer .icon {
+  width: 100%;
+  max-width: 250px;
+  padding: 80px 0px;
+}
 /*# sourceMappingURL=style.css.map */

@@ -243,5 +243,89 @@ section {
         &.big{
             height: 460px;
         }
+        &:before{
+            content: "";
+            display: block;
+            @include size(100%,100%);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0.7);
+            opacity: 0;
+            z-index: 5;
+            transition: 0.5s;
+        }
+        .texts{
+            @include ab_center();
+            z-index: 5;
+            opacity: 0;
+            color: $color_white;
+            transition: 0.5s;
+        }
+        .title{
+            line-height: 24px;
+        }
+        &:hover{
+            &:before,.texts{
+                opacity: 1;
+            }
+        }
+    }
+    .work img{
+        height: 100%;
+        @include ab_center();
+    }
+}
+
+// contact
+#section_contact{
+    background-color: $color_blue;
+    color: $color_white;
+    overflow: hidden;
+    .mails{
+        height: 500px;
+        .mailbody{
+            background-color:$color_white;
+            color: $color_blue;
+            padding: 20px;
+            padding-left: 10%;
+            position: absolute;
+            width: 80%;
+            transform: translateX(-30px);
+            h5{
+                font-size: 2rem;
+            }
+        }
+        .mailcover{
+            @include ab_center();
+              margin-top: 8%;
+            transform: rotate(5deg) scale(2.2) translate(-50%,-50%);
+            img{
+                width: 120%;
+            }
+        }
+        input,textarea{
+            display: block;
+            background-color: transparent;
+            border: none;
+            border:3px solid $color_blue;
+            width: 80%;
+            margin-bottom: 15px;
+        }
+        textarea{
+            height: 100px;
+            width: 80%;
+            resize: none;
+        }
+    }
+}
+// footer
+#footer{
+    background-color:$color_brown;
+    text-align: center;
+    .icon{
+        width: 100%;
+        max-width: 250px;
+        padding: 80px 0px;
     }
 }
