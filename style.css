@@ -225,7 +225,7 @@ section #section_about #cross {
 
 #section_works {
   background-color: #ececec;
-  padding-top: 0;
+  padding-top: 0px;
 }
 
 #section_works h1 {
@@ -234,6 +234,7 @@ section #section_about #cross {
   font-size: 1.25rem;
   padding: 6px 25px;
   display: inline-block;
+  font-weight: normal;
 }
 
 #section_works .marginbottom {
@@ -254,6 +255,7 @@ section #section_about #cross {
   cursor: pointer;
   position: relative;
   padding: 5px;
+  float: right;
 }
 
 #section_works .work.big {

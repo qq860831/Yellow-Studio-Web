@@ -22,6 +22,13 @@ $(document).ready(function(){
   $(window).mousemove(function(evt){
   var pagex = evt.pageX;
   var pagey = evt.pageY;
+  //計算相對區域的位置
+   var x = pagex-$("section#section_about").offset().left;
+   var y = pagey-$("section#section_about").offset().top;
+
+
+
+   
 
   //更新一些移動景物的位置
   $(".mountain").css("transform","translateX("+(x/-20+50)+"px)")
@@ -43,8 +50,7 @@ $(document).ready(function(){
         }
       });
     }
-  
-});
+  });
 
 
 });
